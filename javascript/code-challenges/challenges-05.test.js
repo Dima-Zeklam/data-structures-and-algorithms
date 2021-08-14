@@ -330,47 +330,26 @@ Write a function named extractChildren that, given the array of characters from 
 
 2) Then, uses reduce to return an array of all the children's names in the filtered array
 ------------------------------------------------------------------------------------------------ */
-// const include = (str,char)=>{
-// let strArr = [];
-// let x=-1;
-// for(let i =0 ;i<str.length;i++){
-//   strArr.push(str[i]);
+
+
+// const extractChildren = (arr) => {
+//   // Solution code here...
+//   let newArray = arr.filter((ele)=>{
+//     if([...ele.name].indexOf('a') !== -1){
+// return true;
 // }
-// for(let y = 0;y<strArr.length;y++){
-// if(strArr[y] === char){
-//   x = 1;
-// }
-// }
-// return x;
-// }
-const filtering = (arr) => {
-  // Solution code here...
+// }) 
+//   let newArr = newArray.reduce((acc,val,index)=>{
+//     if(val.children)
+// acc[index] =  val.children;
 
-  let newArray = arr.filter(ele=>{
-   let l = ele.name.toLowerCase().indexOf('a');
-    if(ele.name.toLowerCase().indexOf('a') !== -1){
-      console.log(l);
-    return true;
-  
-  }
-    }) 
-    return newArray;
-};
-const extractChildren = (arr) => {
-  // Solution code here...
+//     return acc;
+//   },[]);
+//   return newArr;
+// };
 
-  let filterArr = filtering(arr);
-
-  let newArr = filterArr.reduce((acc,val,index)=>{
-    if(val.children)
-acc[index] =  val.children;
-
-    return acc;
-  },[]);
-  return newArr;
-};
-
-/* ------------------------------------------------------------------------------------------------
+/* 
+------------------------------------------------------------------------------------------------
 TESTS
 
 All the code below will verify that your functions are working to solve the challenges.
